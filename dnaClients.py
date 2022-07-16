@@ -1,0 +1,13 @@
+import requests
+import pprint
+
+url = "https://sandboxdnac2.cisco.com/dna/intent/api/v1/client-health"
+
+payload={}
+headers = {
+  'X-Auth-Token': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjQxOTIzZTU3MjU5NTA2YTU2YjRhYTEiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjYyM2YwMjlhNTcyNTk1MDZhNTZhZDljNCJdLCJ0ZW5hbnRJZCI6IjYyM2YwMjk4NTcyNTk1MDZhNTZhZDliZCIsImV4cCI6MTY1NTYyNTc3MiwiaWF0IjoxNjU1NjIyMTcyLCJqdGkiOiJhNTVjMThhMy00OTE0LTQ5YzctYThiMC1jMmU0MTI0ZjM4NzQiLCJ1c2VybmFtZSI6ImRldm5ldHVzZXIifQ.rdoy6-RHWztLKwDlIZBCo55fc09zUvRo1e4iwLgC7hveeQ8tAkXDXVXfLN70tTghWur1WZhXWq6cRW6N3uoRcerJXqyuPzU2Mk4ta89radW80lbMDcfPzUtY8qNGL-HYHZGMJecGXeqEXyVQgRydX7cVa6yZQ7VYeVTR59BDgiExa0OZ2WneqYuifHUNKdVorLY4qNrgfnjfkixM0pLG4rH0dcCbbclHmYO-LnngF6XtVU-Kd8dGdIydmAGg5pg4gAypnYZd-2u6IyQCepvud5fISp8hy7druUisEs-beCsu6h1baiaWtLsA5Q0uTe0XydGjwjBksePD7dac7mefIQ'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload, verify=False)
+
+pprint.pprint(response.text)
